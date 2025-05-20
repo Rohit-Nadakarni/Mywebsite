@@ -1,3 +1,7 @@
+[build]
+  publish = "."
+  # command = "your-build-command" # Add if you have a build step
+
 [[headers]]
   for = "/*"
   [headers.values]
