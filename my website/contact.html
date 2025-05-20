@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Rohit Nadakarni</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h3>Rohit Nadakarni</h3>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+        <button class="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="music-toggle">
+            <i class="fas fa-music"></i>
+        </button>
+    </header>
+    
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="gradient-text">Get in Touch</h1>
+                <p>Have a question or want to collaborate? Send me a message!</p>
+            </div>
+        </section>
+        
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="details">
+                                <h3>Email</h3>
+                                <p>rohitnadakarni99@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="details">
+                                <h3>Location</h3>
+                                <p>Hubli, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="details">
+                                <h3>School</h3>
+                                <p>Medha PUC</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links">
+                            <h3>Connect With Me</h3>
+                            <div class="social-icons">
+                                <a href="https://github.com/Rohit-Nadakarni" target="_blank" class="social-icon">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/rohit-nadakarni-9524a033a/" target="_blank" class="social-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="https://www.instagram.com/ogrohitnadakarni/" target="_blank" class="social-icon">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://x.com/Rohitnadakarni" target="_blank" class="social-icon">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <h2>Send a Message</h2>
+                        <form id="contact-form" class="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                            <p class="hidden">
+                                <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                            </p>
+                            <input type="hidden" name="form-name" value="contact" />
+                            
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" rows="6" required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="faq-section">
+            <div class="container">
+                <h2>Frequently Asked Questions</h2>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>What grade are you in?</h3>
+                        <p>I am currently in Class 12, pursuing my high school education with a focus on computer science and mathematics.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>What programming languages do you know?</h3>
+                        <p>I'm proficient in HTML, CSS, and JavaScript for web development. I'm also familiar with Python for general programming and data analysis.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Are you available for internships?</h3>
+                        <p>Yes, I'm looking for internship opportunities during school breaks to gain practical experience and enhance my skills.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Can we collaborate on a project?</h3>
+                        <p>Absolutely! I'm always open to collaborating on interesting projects. Please reach out through the contact form with your ideas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Rohit Nadakarni</h3>
+                <p>Content Creator, Coder & Entrepreneur</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="tools.html">Tools</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/Rohit-Nadakarni" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rohit-nadakarni-9524a033a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/ogrohitnadakarni/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Rohit Nadakarni. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <audio id="background-music" loop>
+        <source src="SpotiDownloader.com - Nainowale Ne - Neeti Mohan.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html> 

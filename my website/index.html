@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit Nadakarni | Digital Identity</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700&family=Manrope:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h3>Rohit Nadakarni</h3>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+        <button onclick="toggleDarkMode()" class="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button onclick="toggleMusic()" class="music-toggle">
+            <i class="fas fa-music"></i>
+        </button>
+    </header>
+    
+    <main>
+        <section id="home" class="hero-section">
+            <div class="animated-background"></div>
+            <div class="floating-words">
+                <span class="word word-1">Mindfulness</span>
+                <span class="word word-2">Productivity</span>
+                <span class="word word-3">Growth</span>
+                <span class="word word-4">Efficiency</span>
+                <span class="word word-5">Motivation</span>
+                <span class="word word-6">Consistency</span>
+                <span class="word word-7">Self-help</span>
+                <span class="word word-8">Inspiration</span>
+                <span class="word word-9">Discipline</span>
+                <span class="word word-10">Focus</span>
+                <span class="word word-11">Top 1%</span>
+                <span class="word word-12">Resilience</span>
+            </div>
+            
+            <div class="lightbulb-icon">
+                <i class="fas fa-lightbulb"></i>
+            </div>
+            
+            <div class="hero-content">
+                <div class="animated-text">
+                    <div class="elegant-name">
+                        <span class="first-name">Rohit</span>
+                        <span class="last-name">Nadakarni</span>
+                    </div>
+                    <h2 class="animate-slide-up delay-1">Let me introduce myself</h2>
+                    <p class="animate-slide-up delay-2">I am a <span id="typewriter"></span></p>
+                </div>
+                <div class="cta-buttons animate-fade-in delay-3">
+                    <a href="about.html" class="btn btn-primary">Learn About Me</a>
+                    <a href="tools.html" class="btn btn-secondary">Try Productivity Tools</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Rohit Nadakarni</h3>
+                <p>Content Creator, Coder & Entrepreneur</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="tools.html">Tools</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/Rohit-Nadakarni" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rohit-nadakarni-9524a033a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/ogrohitnadakarni/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/Rohitnadakarni" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rohit Nadakarni. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <audio id="background-music" loop>
+        <source src="SpotiDownloader.com - Nainowale Ne - Neeti Mohan.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>

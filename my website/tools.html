@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Tools | Rohit Nadakarni</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h3>Rohit Nadakarni</h3>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="tools.html" class="active">Tools</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+        <button class="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="music-toggle">
+            <i class="fas fa-music"></i>
+        </button>
+    </header>
+    
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="gradient-text">Productivity Tools</h1>
+                <p>A collection of tools to help you stay focused and organized</p>
+            </div>
+        </section>
+        
+        <section class="tools-section">
+            <div class="container tools-grid">
+                <!-- Pomodoro Timer Card -->
+                <div class="tool-card" id="pomodoro-card">
+                    <div class="tool-icon pomodoro"><i class="fas fa-stopwatch"></i></div>
+                    <h2>Pomodoro Timer</h2>
+                    <p>Stay focused with the Pomodoro Technique: work for a set time, then take a short break.</p>
+                    <button class="open-tool-btn" data-tool="pomodoro">Open</button>
+                </div>
+                <!-- To-Do List Card -->
+                <div class="tool-card" id="todo-card">
+                    <div class="tool-icon todo"><i class="fas fa-tasks"></i></div>
+                    <h2>To-Do List</h2>
+                    <p>Keep track of your tasks and boost your productivity.</p>
+                    <button class="open-tool-btn" data-tool="todo">Open</button>
+                </div>
+                <!-- Notes Card -->
+                <div class="tool-card" id="notes-card">
+                    <div class="tool-icon notes"><i class="fas fa-sticky-note"></i></div>
+                    <h2>Notes</h2>
+                    <p>Jot down ideas, reminders, or anything you want to remember.</p>
+                    <button class="open-tool-btn" data-tool="notes">Open</button>
+                </div>
+                <!-- Habit Tracker Card -->
+                <div class="tool-card" id="habit-card">
+                    <div class="tool-icon habit"><i class="fas fa-calendar-check"></i></div>
+                    <h2>Habit Tracker</h2>
+                    <p>Track your daily habits and build streaks for self-improvement.</p>
+                    <button class="open-tool-btn" data-tool="habit">Open</button>
+                </div>
+                <!-- Password Generator Card -->
+                <div class="tool-card" id="password-card">
+                    <div class="tool-icon password"><i class="fas fa-key"></i></div>
+                    <h2>Password Generator</h2>
+                    <p>Create secure, random passwords for your accounts.</p>
+                    <button class="open-tool-btn" data-tool="password">Open</button>
+                </div>
+                <!-- Unit Converter Card -->
+                <div class="tool-card" id="unit-card">
+                    <div class="tool-icon unit"><i class="fas fa-exchange-alt"></i></div>
+                    <h2>Unit Converter</h2>
+                    <p>Convert between different units of measurement easily.</p>
+                    <button class="open-tool-btn" data-tool="unit">Open</button>
+                </div>
+                <!-- Focus Music Player Card -->
+                <div class="tool-card" id="music-card">
+                    <div class="tool-icon music"><i class="fas fa-music"></i></div>
+                    <h2>Focus Music Player</h2>
+                    <p>Listen to ambient music to boost your concentration.</p>
+                    <button class="open-tool-btn" data-tool="music">Open</button>
+                </div>
+                <!-- Random Quote Generator Card -->
+                <div class="tool-card" id="quote-card">
+                    <div class="tool-icon quote"><i class="fas fa-quote-right"></i></div>
+                    <h2>Quote Generator</h2>
+                    <p>Get a motivational quote to inspire your day.</p>
+                    <button class="open-tool-btn" data-tool="quote">Open</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tool Modal System -->
+        <div class="tool-modal-overlay" id="tool-modal-overlay">
+            <div class="tool-modal">
+                <div class="tool-modal-header">
+                    <h2 id="tool-modal-title">Tool Name</h2>
+                    <button class="close-modal-btn"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="tool-modal-content">
+                    <!-- Pomodoro Timer Tool -->
+                    <div class="tool-content" id="pomodoro-tool">
+                        <div class="pomodoro-container">
+                            <div class="pomodoro-layout">
+                                <div class="pomodoro-sidebar">
+                                    <div class="pomodoro-modes">
+                                        <button class="pomodoro-mode-btn active" data-mode="focus">Focus</button>
+                                        <button class="pomodoro-mode-btn" data-mode="shortBreak">Short Break</button>
+                                        <button class="pomodoro-mode-btn" data-mode="longBreak">Long Break</button>
+                                    </div>
+                                    
+                                    <div class="pomodoro-stats">
+                                        <div class="stats-card">
+                                            <div class="stats-icon"><i class="fas fa-fire"></i></div>
+                                            <div class="stats-info">
+                                                <h4>Focus Sessions</h4>
+                                                <span id="focus-count">0</span>
+                                            </div>
+                                        </div>
+                                        <div class="stats-card">
+                                            <div class="stats-icon"><i class="fas fa-clock"></i></div>
+                                            <div class="stats-info">
+                                                <h4>Total Focus Time</h4>
+                                                <span id="total-focus-time">0 min</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="pomodoro-tasks">
+                                        <h3>Current Task</h3>
+                                        <div class="task-input">
+                                            <input type="text" id="current-task" placeholder="What are you working on?">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="pomodoro-main">
+                                    <div class="timer-wrapper">
+                                        <div class="timer-progress">
+                                            <svg class="timer-progress-svg" viewBox="0 0 400 400" width="100%" height="100%">
+                                                <!-- Gradient Definition -->
+                                                <defs>
+                                                    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                        <stop offset="0%" stop-color="#ff8a00" />
+                                                        <stop offset="50%" stop-color="#ff5f00" />
+                                                        <stop offset="100%" stop-color="#ff3900" />
+                                                    </linearGradient>
+                                                </defs>
+                                                
+                                                <!-- Background Circle -->
+                                                <circle class="timer-progress-bg" cx="200" cy="200" r="175" />
+                                                
+                                                <!-- Animated Progress Circle -->
+                                                <circle class="timer-progress-ring" cx="200" cy="200" r="175" 
+                                                      stroke-dasharray="1100 1100" stroke-dashoffset="1100" />
+                                                
+                                                <!-- Pulse Animation -->
+                                                <circle class="timer-progress-pulse" cx="200" cy="200" r="185" />
+                                            </svg>
+                                            
+                                            <div class="timer-content">
+                                                <div class="timer-mode-label" id="pomodoro-label">FOCUS TIME</div>
+                                                <div class="timer-display" id="timer">25:00</div>
+                                                <div class="timer-task-display" id="task-display">No task set</div>
+                                                
+                                                <div class="timer-controls">
+                                                    <button id="start-timer" class="timer-btn start"><i class="fas fa-play"></i></button>
+                                                    <button id="pause-timer" class="timer-btn pause" disabled><i class="fas fa-pause"></i></button>
+                                                    <button id="reset-timer" class="timer-btn reset"><i class="fas fa-redo"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="pomodoro-settings">
+                                    <h3>Timer Settings</h3>
+                                    <div class="settings-group">
+                                        <div class="setting-card">
+                                            <div class="setting-icon"><i class="fas fa-brain"></i></div>
+                                            <div class="setting-content">
+                                                <label for="focus-time">Focus Time</label>
+                                                <div class="setting-control">
+                                                    <button class="setting-btn minus" data-setting="focus"><i class="fas fa-minus"></i></button>
+                                                    <span id="focus-time">25</span> min
+                                                    <button class="setting-btn plus" data-setting="focus"><i class="fas fa-plus"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="setting-card">
+                                            <div class="setting-icon"><i class="fas fa-coffee"></i></div>
+                                            <div class="setting-content">
+                                                <label for="short-break-time">Short Break</label>
+                                                <div class="setting-control">
+                                                    <button class="setting-btn minus" data-setting="shortBreak"><i class="fas fa-minus"></i></button>
+                                                    <span id="short-break-time">5</span> min
+                                                    <button class="setting-btn plus" data-setting="shortBreak"><i class="fas fa-plus"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="setting-card">
+                                            <div class="setting-icon"><i class="fas fa-bed"></i></div>
+                                            <div class="setting-content">
+                                                <label for="long-break-time">Long Break</label>
+                                                <div class="setting-control">
+                                                    <button class="setting-btn minus" data-setting="longBreak"><i class="fas fa-minus"></i></button>
+                                                    <span id="long-break-time">15</span> min
+                                                    <button class="setting-btn plus" data-setting="longBreak"><i class="fas fa-plus"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="setting-card">
+                                            <div class="setting-icon"><i class="fas fa-repeat"></i></div>
+                                            <div class="setting-content">
+                                                <label for="pomodoro-cycles">Cycles before long break</label>
+                                                <div class="setting-control">
+                                                    <button class="setting-btn minus" data-setting="cycles"><i class="fas fa-minus"></i></button>
+                                                    <span id="pomodoro-cycles">4</span>
+                                                    <button class="setting-btn plus" data-setting="cycles"><i class="fas fa-plus"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="settings-toggles">
+                                        <div class="toggle-setting">
+                                            <span>Auto-start breaks</span>
+                                            <label class="switch">
+                                                <input type="checkbox" id="auto-start-breaks">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                        <div class="toggle-setting">
+                                            <span>Auto-start pomodoros</span>
+                                            <label class="switch">
+                                                <input type="checkbox" id="auto-start-pomodoros">
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                        <div class="toggle-setting">
+                                            <span>Sound notifications</span>
+                                            <label class="switch">
+                                                <input type="checkbox" id="sound-notifications" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- To-Do List Tool -->
+                    <div class="tool-content" id="todo-tool">
+                        <div class="todo-container">
+                            <div class="todo-header">
+                                <div class="todo-input-group">
+                                    <input type="text" id="todo-input" placeholder="Add a new task...">
+                                    <button id="add-todo" class="todo-add-btn"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="todo-stats">
+                                <div class="todo-stat">
+                                    <span id="tasks-total">0</span>
+                                    <label>Total</label>
+                                </div>
+                                <div class="todo-stat">
+                                    <span id="tasks-completed">0</span>
+                                    <label>Completed</label>
+                                </div>
+                                <div class="todo-stat">
+                                    <span id="tasks-remaining">0</span>
+                                    <label>Remaining</label>
+                                </div>
+                            </div>
+                            
+                            <div class="todo-list-container">
+                                <ul id="todo-list" class="todo-list">
+                                    <!-- Todo items will be added here by JavaScript -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Notes Tool -->
+                    <div class="tool-content" id="notes-tool">
+                        <div class="notes-container">
+                            <div class="notes-sidebar">
+                                <div class="notes-sidebar-header">
+                                    <h3>My Notes</h3>
+                                    <button id="new-note" class="notes-new-btn"><i class="fas fa-plus"></i></button>
+                                </div>
+                                <div class="notes-list-container">
+                                    <select id="notes-list" class="notes-select">
+                                        <option value="-1">-- Select a note --</option>
+                                        <!-- Note options will be added here by JavaScript -->
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="notes-editor">
+                                <input type="text" id="note-title" placeholder="Note title...">
+                                <textarea id="note-content" placeholder="Write your note here..."></textarea>
+                                <button id="save-note" class="notes-save-btn"><i class="fas fa-save"></i> Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Habit Tracker Tool -->
+                    <div class="tool-content" id="habit-tool">
+                        <div class="habit-container">
+                            <div class="habit-header">
+                                <div class="habit-input-group">
+                                    <input type="text" id="habit-input" placeholder="Add a new habit...">
+                                    <button id="add-habit" class="habit-add-btn"><i class="fas fa-plus"></i></button>
+                                </div>
+                            </div>
+                            
+                            <div class="habit-calendar">
+                                <div class="habit-calendar-header">
+                                    <div class="habit-name-col">Habit</div>
+                                    <div class="habit-days">
+                                        <div>Mon</div>
+                                        <div>Tue</div>
+                                        <div>Wed</div>
+                                        <div>Thu</div>
+                                        <div>Fri</div>
+                                        <div>Sat</div>
+                                        <div>Sun</div>
+                                    </div>
+                                </div>
+                                
+                                <div id="habit-list" class="habit-list">
+                                    <!-- Habit items will be added here by JavaScript -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Password Generator Tool -->
+                    <div class="tool-content" id="password-tool">
+                        <div class="password-container">
+                            <div class="password-display">
+                                <input type="text" id="password-result" readonly placeholder="Your secure password">
+                                <button id="copy-password" class="password-copy-btn"><i class="fas fa-copy"></i></button>
+                            </div>
+                            
+                            <div class="password-settings">
+                                <div class="password-length">
+                                    <label for="password-length">Password Length: <span id="length-value">12</span></label>
+                                    <input type="range" min="8" max="32" value="12" id="password-length">
+                                </div>
+                                
+                                <div class="password-options">
+                                    <div class="password-option">
+                                        <input type="checkbox" id="uppercase" checked>
+                                        <label for="uppercase">Include Uppercase</label>
+                                    </div>
+                                    <div class="password-option">
+                                        <input type="checkbox" id="lowercase" checked>
+                                        <label for="lowercase">Include Lowercase</label>
+                                    </div>
+                                    <div class="password-option">
+                                        <input type="checkbox" id="numbers" checked>
+                                        <label for="numbers">Include Numbers</label>
+                                    </div>
+                                    <div class="password-option">
+                                        <input type="checkbox" id="symbols">
+                                        <label for="symbols">Include Symbols</label>
+                                    </div>
+                                </div>
+                                
+                                <button id="generate-password" class="password-generate-btn">Generate Password</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Unit Converter Tool -->
+                    <div class="tool-content" id="unit-tool">
+                        <div class="unit-container">
+                            <div class="unit-type-selector">
+                                <button class="unit-type-btn active" data-type="length">Length</button>
+                                <button class="unit-type-btn" data-type="weight">Weight</button>
+                                <button class="unit-type-btn" data-type="temperature">Temperature</button>
+                            </div>
+                            
+                            <div class="unit-converter">
+                                <div class="unit-input-group">
+                                    <input type="number" id="unit-input" value="1">
+                                    <select id="unit-from"></select>
+                                </div>
+                                
+                                <div class="unit-swap">
+                                    <button id="swap-units"><i class="fas fa-exchange-alt"></i></button>
+                                </div>
+                                
+                                <div class="unit-input-group">
+                                    <input type="number" id="unit-output" readonly>
+                                    <select id="unit-to"></select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Focus Music Player Tool -->
+                    <div class="tool-content" id="music-tool">
+                        <div class="music-container">
+                            <div class="music-player">
+                                <div class="music-info">
+                                    <h3 id="music-title">Focus Music</h3>
+                                    <p id="music-category">Ambient</p>
+                                </div>
+                                
+                                <div class="music-controls">
+                                    <button id="prev-track" class="music-btn"><i class="fas fa-step-backward"></i></button>
+                                    <button id="play-music" class="music-btn play"><i class="fas fa-play"></i></button>
+                                    <button id="next-track" class="music-btn"><i class="fas fa-step-forward"></i></button>
+                                </div>
+                                
+                                <div class="music-volume">
+                                    <i class="fas fa-volume-down"></i>
+                                    <input type="range" min="0" max="100" value="70" id="music-volume">
+                                    <i class="fas fa-volume-up"></i>
+                                </div>
+                                
+                                <div class="music-categories">
+                                    <button class="music-category-btn active" data-category="ambient">Ambient</button>
+                                    <button class="music-category-btn" data-category="nature">Nature</button>
+                                    <button class="music-category-btn" data-category="lofi">Lo-Fi</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Quote Generator Tool -->
+                    <div class="tool-content" id="quote-tool">
+                        <div class="quote-container">
+                            <div class="quote-box">
+                                <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                                <p id="quote-text">The only way to do great work is to love what you do.</p>
+                                <p id="quote-author">- Steve Jobs</p>
+                            </div>
+                            
+                            <div class="quote-controls">
+                                <button id="new-quote" class="quote-btn">New Quote</button>
+                                <button id="share-quote" class="quote-btn share"><i class="fab fa-twitter"></i> Share</button>
+                            </div>
+                            
+                            <div class="quote-categories">
+                                <button class="quote-category-btn active" data-category="motivational">Motivational</button>
+                                <button class="quote-category-btn" data-category="success">Success</button>
+                                <button class="quote-category-btn" data-category="wisdom">Wisdom</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <section class="tools-info">
+            <div class="container">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>The Pomodoro Technique</h3>
+                    <p>The Pomodoro Technique is a time management method developed by Francesco Cirillo in the late 1980s. The technique uses a timer to break work into intervals, traditionally 25 minutes in length, separated by short breaks.</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Task Management</h3>
+                    <p>Writing down your tasks helps you stay organized and reduces mental stress. Our to-do list tool makes it easy to capture what you need to do and mark tasks as complete.</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-sticky-note"></i>
+                    </div>
+                    <h3>Note Taking Benefits</h3>
+                    <p>Taking notes helps you remember important information and organize your thoughts. Our notes tool saves your notes automatically to your browser's local storage.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Rohit Nadakarni</h3>
+                <p>Content Creator, Coder & Entrepreneur</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="tools.html">Tools</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/Rohit-Nadakarni" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rohit-nadakarni-9524a033a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/ogrohitnadakarni/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/Rohitnadakarni" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rohit Nadakarni. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <audio id="background-music" loop>
+        <source src="SpotiDownloader.com - Nainowale Ne - Neeti Mohan.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html> 

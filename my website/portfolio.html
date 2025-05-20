@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Rohit Nadakarni</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h3>Rohit Nadakarni</h3>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="tools.html">Tools</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+        <button class="dark-mode-toggle">
+            <i class="fas fa-moon"></i>
+        </button>
+        <button class="music-toggle">
+            <i class="fas fa-music"></i>
+        </button>
+    </header>
+    
+    <main>
+        <section class="portfolio-section">
+            <div class="page-intro">
+                <h1 class="page-title animate-slide-up">My Portfolio</h1>
+                <div class="divider animate-slide-up delay-1"></div>
+                <p class="page-subtitle animate-slide-up delay-1">A showcase of my digital creations</p>
+            </div>
+            
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="youtube">YouTube Channels</button>
+                <button class="filter-btn" data-filter="web">Web Projects</button>
+            </div>
+            
+            <div class="portfolio-container">
+                <div class="portfolio-item" data-category="youtube">
+                    <div class="portfolio-content">
+                        <div class="portfolio-image">
+                            <svg width="100%" height="100%" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Background with gradient -->
+                                <defs>
+                                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="600" height="400" fill="url(#grad1)" rx="15" />
+                                
+                                <!-- YouTube Channel Art -->
+                                <rect x="100" y="80" width="400" height="220" rx="15" fill="#FF0000" />
+                                
+                                <!-- YouTube Play Button -->
+                                <circle cx="300" cy="180" r="50" fill="white" />
+                                <polygon points="285,155 285,205 325,180" fill="#FF0000" />
+                                
+                                <!-- Channel Name with Shadow -->
+                                <filter id="shadow1" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#00000055" />
+                                </filter>
+                                <text x="300" y="340" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold" fill="#333" filter="url(#shadow1)">Rohit Nadakarni Unfiltered</text>
+                                
+                                <!-- Decorative Elements -->
+                                <circle cx="150" cy="340" r="8" fill="#FF0000" opacity="0.8" />
+                                <circle cx="450" cy="340" r="8" fill="#FF0000" opacity="0.8" />
+                                <rect x="170" cy="337" width="80" height="5" rx="2" fill="#333" opacity="0.2" />
+                                <rect x="350" cy="337" width="80" height="5" rx="2" fill="#333" opacity="0.2" />
+                            </svg>
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>Rohit Nadakarni Unfiltered</h3>
+                                    <a href="https://youtube.com/@rohit_nadakarni_unfiltered?si=YiZnu4HqnGzRWTkH" target="_blank" class="view-project">View Channel</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <h3>Rohit Nadakarni Unfiltered</h3>
+                            <p>My main YouTube channel where I share unfiltered thoughts, ideas, and creative content about various topics.</p>
+                            <div class="tech-stack">
+                                <span><i class="fas fa-video"></i> Content Creation</span>
+                                <span><i class="fas fa-edit"></i> Video Editing</span>
+                                <span><i class="fas fa-microphone"></i> Commentary</span>
+                            </div>
+                            <div class="portfolio-buttons">
+                                <a href="https://youtube.com/@rohit_nadakarni_unfiltered?si=YiZnu4HqnGzRWTkH" target="_blank" class="btn btn-sm"><i class="fab fa-youtube"></i> View Channel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="youtube">
+                    <div class="portfolio-content">
+                        <div class="portfolio-image">
+                            <svg width="100%" height="100%" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Background with gradient -->
+                                <defs>
+                                    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="600" height="400" fill="url(#grad2)" rx="15" />
+                                
+                                <!-- YouTube Channel Art -->
+                                <rect x="100" y="80" width="400" height="220" rx="15" fill="#FF0000" />
+                                
+                                <!-- Indian Flag-inspired Graphics -->
+                                <rect x="200" y="120" width="200" height="40" fill="#FF9933" />
+                                <rect x="200" y="160" width="200" height="40" fill="#FFFFFF" />
+                                <rect x="200" y="200" width="200" height="40" fill="#138808" />
+                                <circle cx="300" cy="180" r="12" fill="#000080" />
+                                
+                                <!-- Channel Name with Shadow -->
+                                <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#00000055" />
+                                </filter>
+                                <text x="300" y="340" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold" fill="#333" filter="url(#shadow2)">Thought Nation</text>
+                                
+                                <!-- Decorative Elements -->
+                                <circle cx="150" cy="340" r="8" fill="#FF0000" opacity="0.8" />
+                                <circle cx="450" cy="340" r="8" fill="#FF0000" opacity="0.8" />
+                                <rect x="170" cy="337" width="80" height="5" rx="2" fill="#333" opacity="0.2" />
+                                <rect x="350" cy="337" width="80" height="5" rx="2" fill="#333" opacity="0.2" />
+                            </svg>
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>Thought Nation</h3>
+                                    <a href="https://youtube.com/@thoughtnation?si=GpoRfXHCPuHQrG0l" target="_blank" class="view-project">View Channel</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <h3>Thought Nation</h3>
+                            <p>A YouTube channel focused on patriotic content, national issues, and thought-provoking discussions about India.</p>
+                            <div class="tech-stack">
+                                <span><i class="fas fa-flag"></i> Patriotic Content</span>
+                                <span><i class="fas fa-lightbulb"></i> Thought Leadership</span>
+                                <span><i class="fas fa-users"></i> Community Building</span>
+                            </div>
+                            <div class="portfolio-buttons">
+                                <a href="https://youtube.com/@thoughtnation?si=GpoRfXHCPuHQrG0l" target="_blank" class="btn btn-sm"><i class="fab fa-youtube"></i> View Channel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="youtube">
+                    <div class="portfolio-content">
+                        <div class="portfolio-image">
+                            <svg width="100%" height="100%" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Background with gradient -->
+                                <defs>
+                                    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="600" height="400" fill="url(#grad3)" rx="15" />
+                                
+                                <!-- YouTube Channel Art -->
+                                <rect x="100" y="80" width="400" height="220" rx="15" fill="#FF0000" />
+                                
+                                <!-- Microphone Icon -->
+                                <circle cx="300" cy="180" r="60" fill="#FFFFFF" />
+                                <path d="M300,140 L300,200 M285,145 C285,135 315,135 315,145 L315,185 C315,195 285,195 285,185 Z" stroke="#333333" stroke-width="8" fill="none" />
+                                <path d="M270,180 C270,210 330,210 330,180" stroke="#333333" stroke-width="6" fill="none" />
+                                <rect x="295" y="200" width="10" height="20" fill="#333333" />
+                                <rect x="280" y="220" width="40" height="5" rx="2" fill="#333333" />
+                                
+                                <!-- Channel Name with Shadow -->
+                                <filter id="shadow3" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#00000055" />
+                                </filter>
+                                <text x="300" y="340" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold" fill="#333" filter="url(#shadow3)">Rohit Nadakarni</text>
+                                
+                                <!-- Decorative Elements -->
+                                <circle cx="150" cy="340" r="8" fill="#FF0000" opacity="0.8" />
+                                <circle cx="450" cy="340" r="8" fill="#FF0000" opacity="0.8" />
+                                <rect x="170" cy="337" width="80" height="5" rx="2" fill="#333" opacity="0.2" />
+                                <rect x="350" cy="337" width="80" height="5" rx="2" fill="#333" opacity="0.2" />
+                            </svg>
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>Rohit Nadakarni</h3>
+                                    <a href="https://youtube.com/@rohit_nadakarni?si=IAAFF3q8ci-R5Pgb" target="_blank" class="view-project">View Channel</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <h3>Rohit Nadakarni</h3>
+                            <p>My channel focused on commentary, analysis and educational content to help viewers learn and gain new perspectives.</p>
+                            <div class="tech-stack">
+                                <span><i class="fas fa-graduation-cap"></i> Education</span>
+                                <span><i class="fas fa-comment"></i> Commentary</span>
+                                <span><i class="fas fa-book"></i> Learning Resources</span>
+                            </div>
+                            <div class="portfolio-buttons">
+                                <a href="https://youtube.com/@rohit_nadakarni?si=IAAFF3q8ci-R5Pgb" target="_blank" class="btn btn-sm"><i class="fab fa-youtube"></i> View Channel</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-content">
+                        <div class="portfolio-image">
+                            <svg width="100%" height="100%" viewBox="0 0 600 400" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Background with gradient -->
+                                <defs>
+                                    <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#f5f5f5;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#e0e0e0;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <rect width="600" height="400" fill="url(#grad4)" rx="15" />
+                                
+                                <!-- Portfolio Website Mockup -->
+                                <rect x="150" y="80" width="300" height="220" rx="10" fill="#6C63FF" />
+                                
+                                <!-- Website Content -->
+                                <rect x="170" y="110" width="80" height="80" rx="5" fill="#FFFFFF" />
+                                <rect x="260" y="110" width="170" height="15" rx="2" fill="#FFFFFF" />
+                                <rect x="260" y="135" width="140" height="10" rx="2" fill="#FFFFFF" opacity="0.8" />
+                                <rect x="260" y="155" width="120" height="10" rx="2" fill="#FFFFFF" opacity="0.8" />
+                                <rect x="260" y="175" width="80" height="15" rx="7" fill="#FFFFFF" opacity="0.9" />
+                                
+                                <rect x="170" y="200" width="260" height="1" fill="#FFFFFF" opacity="0.5" />
+                                
+                                <rect x="170" y="210" width="40" height="40" rx="5" fill="#FFFFFF" opacity="0.9" />
+                                <rect x="220" y="210" width="40" height="40" rx="5" fill="#FFFFFF" opacity="0.9" />
+                                <rect x="270" y="210" width="40" height="40" rx="5" fill="#FFFFFF" opacity="0.9" />
+                                <rect x="320" y="210" width="40" height="40" rx="5" fill="#FFFFFF" opacity="0.9" />
+                                <rect x="370" y="210" width="40" height="40" rx="5" fill="#FFFFFF" opacity="0.9" />
+                                
+                                <!-- Project Name with Shadow -->
+                                <filter id="shadow4" x="-20%" y="-20%" width="140%" height="140%">
+                                    <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#00000055" />
+                                </filter>
+                                <text x="300" y="340" text-anchor="middle" font-family="Arial" font-size="28" font-weight="bold" fill="#333" filter="url(#shadow4)">Source Folio</text>
+                                
+                                <!-- Decorative Elements -->
+                                <circle cx="150" cy="340" r="8" fill="#6C63FF" opacity="0.8" />
+                                <circle cx="450" cy="340" r="8" fill="#6C63FF" opacity="0.8" />
+                                <rect x="170" cy="337" width="80" height="5" rx="2" fill="#333" opacity="0.2" />
+                                <rect x="350" cy="337" width="80" height="5" rx="2" fill="#333" opacity="0.2" />
+                            </svg>
+                            <div class="portfolio-overlay">
+                                <div class="overlay-content">
+                                    <h3>Source Folio</h3>
+                                    <a href="#" class="view-project">View Project</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-details">
+                            <h3>Source Folio</h3>
+                            <p>A portfolio maker website that helps users create beautiful, professional portfolios easily without coding knowledge.</p>
+                            <div class="tech-stack">
+                                <span><i class="fab fa-html5"></i> HTML</span>
+                                <span><i class="fab fa-css3-alt"></i> CSS</span>
+                                <span><i class="fab fa-js"></i> JavaScript</span>
+                            </div>
+                            <div class="portfolio-buttons">
+                                <a href="#" class="btn btn-sm">View Demo</a>
+                                <a href="#" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="portfolio-modal">
+                <div class="modal-content">
+                    <span class="modal-close">&times;</span>
+                    <div class="modal-body">
+                        <h2 class="modal-title">Project Title</h2>
+                        <div class="modal-image">
+                            <img src="https://via.placeholder.com/800x500" alt="Project">
+                        </div>
+                        <div class="modal-description">
+                            <h3>Project Overview</h3>
+                            <p>Detailed description of the project goes here. This section will be populated dynamically when a project is clicked.</p>
+                            
+                            <h3>Technologies Used</h3>
+                            <div class="tech-stack">
+                                <!-- Will be populated dynamically -->
+                            </div>
+                            
+                            <h3>Key Features</h3>
+                            <ul class="feature-list">
+                                <!-- Will be populated dynamically -->
+                            </ul>
+                            
+                            <div class="modal-actions">
+                                <a href="#" class="btn btn-primary">Live Demo</a>
+                                <a href="#" class="btn btn-secondary">GitHub Repo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h3>Rohit Nadakarni</h3>
+                <p>Content Creator, Coder & Entrepreneur</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="tools.html">Tools</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-social">
+                <a href="https://github.com/Rohit-Nadakarni" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rohit-nadakarni-9524a033a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/ogrohitnadakarni/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/Rohitnadakarni" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Rohit Nadakarni. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <audio id="background-music" loop>
+        <source src="SpotiDownloader.com - Nainowale Ne - Neeti Mohan.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html> 
